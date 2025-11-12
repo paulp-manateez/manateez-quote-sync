@@ -7,6 +7,19 @@ const require = createRequire(import.meta.url);
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.type('text/plain').send(
+    'Manateez Sync is live.\nTry: /vendors, /styles/lookup?vendor=S%26S&brand=Gildan&code=64000'
+  );
+});
+app.get('/', (req, res) => {
+  res.send('Manateez Quote Sync API is running 🚀');
+});
+
+app.get('/__status', (req, res) => {
+  res.json({ ok: true, time: new Date().toISOString() });
+});
+
 
 // In-memory caches (swap for Redis if you like)
 const cache = new Map();
