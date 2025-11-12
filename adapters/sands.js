@@ -49,11 +49,3 @@ export async function inventory({ style_id, color }){
   (data.warehouses || data || []).forEach(w => { out[w.code || w.warehouse] = w.onHand || w.qty || 0; });
   return out;
 }
-
-
-
-https://promostandards.ssactivewear.com/productdata/v2/productdataservicev2.svc 
-
-https://promostandards.ssactivewear.com/inventory/v2/inventoryservice.svc 
-
-https://promostandards.ssactivewear.com/mediacontent/v1/mediacontentservice.svc
