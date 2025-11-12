@@ -1,0 +1,10 @@
+{
+  "name": "manateez-quote-sync",
+  "type": "module",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}
