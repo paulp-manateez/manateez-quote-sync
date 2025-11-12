@@ -19,7 +19,9 @@ app.get('/', (req, res) => {
 app.get('/__status', (req, res) => {
   res.json({ ok: true, time: new Date().toISOString() });
 });
-
+app.get('/ping', (req, res) => {
+  res.json({ ok: true, time: Date.now() });
+});
 
 // In-memory caches (swap for Redis if you like)
 const cache = new Map();
